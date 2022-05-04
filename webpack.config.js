@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
@@ -19,10 +20,6 @@ const jsLoaders = () => {
             }
         }
     ]
-
-    if (isDev) {
-        loaders.push('eslint-loader');
-    }
 
     return loaders;
 }
@@ -66,6 +63,9 @@ module.exports = {
         // }),
         new MiniCssExtractPlugin({
             filename: filename('css'),
+        }),
+        new ESLintPlugin({
+            files: 'src/**/*.js',
         })
     ],
     module: {
@@ -73,13 +73,7 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: isDev,
-                            reloadAll: true,
-                        }
-                    },
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
