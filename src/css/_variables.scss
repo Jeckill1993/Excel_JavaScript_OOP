@@ -3,11 +3,13 @@ $header-class: '.excel-header';
 $toolbar-class: '.excel-toolbar';
 $formula-class: '.excel-formula';
 $table-class: '.excel-table';
+$field-class: '.excel__input';
+$button-class: '.excel__button';
 
 /* font-size */
-$h1-desktop: '48px';
-$h1-tablet: '36px';
-$h1-mobile: '24px';
+$h1-desktop: 48px;
+$h1-tablet: 36px;
+$h1-mobile: 24px;
 
 $h2-desktop: 36px;
 $h2-tablet: 24px;
@@ -22,3 +24,19 @@ $h4-tablet: 14px;
 $h4-mobile: 12px;
 
 $paragraph: 12px;
+
+/* colors */
+$black: #07101d;
+$blue: #2d64d7;
+$border-color: #c0c0c0;
+$grey-dark: #565454;
+$white-antique: #e0dede;
+$green-light: #389458;
+
+/* breakpoints */
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+

@@ -1,0 +1,22 @@
+
+#{$header-class} {
+  padding: 15px 0 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__fieldset {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

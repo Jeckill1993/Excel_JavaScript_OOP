@@ -1,0 +1,10 @@
+
+#{$button-class} {
+  @include button($green-light);
+
+  &_dark {
+    &:active {
+      color: $black;
+    }
+  }
+}

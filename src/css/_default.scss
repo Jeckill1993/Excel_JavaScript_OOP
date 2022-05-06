@@ -9,3 +9,30 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: $paragraph;
 }
+
+.excel {
+  position: relative;
+}
+
+.wrapper {
+  display: block;
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: $sm) {
+    padding: 0 30px;
+  }
+  @media screen and (min-width: $xl) {
+    padding: 0 50px;
+  }
+
+  &_small {
+    max-width: 920px;
+  }
+  &_large {
+    max-width: 1820px;
+  }
+
+}

@@ -1,0 +1,15 @@
+
+#{$toolbar-class} {
+  padding: 15px 0 0;
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__group {
+    margin: 0 30px 10px 0;
+  }
+}
