@@ -36,9 +36,10 @@
     "webpack-dev-server": "^4.8.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "@babel/eslint-parser": "^7.5.4",
+    "@babel/polyfill": "^7.12.1",
     "clean-webpack-plugin": "^4.0.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "normalize.css": "^8.0.1"
   }
 }
