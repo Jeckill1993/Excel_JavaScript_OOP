@@ -1,10 +1,24 @@
 
 #{$formula-class} {
-  padding: 15px 0;
+  padding: 5px 0;
+  border: 1px solid $border-color;
 
   &__content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  &__info {
+    width: $row-info-width;
+    min-width: $row-info-width;
+    text-align: center;
+    padding: 0 10px;
+    font-size: $h4-desktop;
+    line-height: 1.5em;
+  }
+
+  &__fieldset {
+    width: 100%;
   }
 }

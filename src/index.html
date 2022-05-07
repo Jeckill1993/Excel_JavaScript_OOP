@@ -13,6 +13,33 @@
 
     <div id="app" class="container">
 
+        <div class="dashboard">
+            <header class="dashboard-header">
+                <div class="wrapper">
+                    <h1 class="dashboard-header__title">Excel Dashboard</h1>
+                    <h3 class="dashboard-header__subtitle">Useful application for creating tables</h3>
+                </div>
+            </header>
+            <div class="dashboard-creator">
+                <a href="#" class="dashboard-creator__button">Create New Table</a>
+            </div>
+            <div class="dashboard-tables">
+                <div class="wrapper">
+                    <h2 class="dashboard-tables__title">Tables</h2>
+                    <div class="dashboard-list">
+                        <div class="dashboard-list__header">
+                            <div class="dashboard-list__name"></div>
+                            <div class="dashboard-list__date"></div>
+                        </div>
+                        <div class="dashboard-list-record">
+                            <div class="dashboard-list-record__name"></div>
+                            <div class="dashboard-list-record__date"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="excel">
             <header class="excel-header">
                 <div class="wrapper">
@@ -79,11 +106,38 @@
                     </div>
                 </div>
             </div>
-            <div class="excel-toolbar">
+            <div class="excel-formula">
                 <div class="wrapper wrapper_large">
-                    <div class="excel-toolbar__content">
-
+                    <div class="excel-formula__content">
+                        <div class="excel-formula__info"><em>fn</em></div>
+                        <div class="excel-formula__fieldset">
+                            <input class="excel__input" />
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="excel-table">
+                <div class="wrapper wrapper_large">
+
+                    <div class="excel-table__row">
+                        <div class="excel-table__row-info"></div>
+                        <div class="excel-table__column-info">A</div>
+                        <div class="excel-table__column-info">B</div>
+                        <div class="excel-table__column-info">C</div>
+                    </div>
+                    <div class="excel-table__row">
+                        <div class="excel-table__row-info">1</div>
+                        <div class="excel-table__cell excel-table__cell_selected" contenteditable="">content1</div>
+                        <div class="excel-table__cell" contenteditable="">content2</div>
+                        <div class="excel-table__cell" contenteditable="">content3</div>
+                    </div>
+                    <div class="excel-table__row">
+                        <div class="excel-table__row-info">2</div>
+                        <div class="excel-table__cell" contenteditable="">content21</div>
+                        <div class="excel-table__cell" contenteditable="">content22</div>
+                        <div class="excel-table__cell" contenteditable="">content23</div>
+                    </div>
+
                 </div>
             </div>
         </div>

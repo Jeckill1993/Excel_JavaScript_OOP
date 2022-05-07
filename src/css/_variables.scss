@@ -5,6 +5,7 @@ $formula-class: '.excel-formula';
 $table-class: '.excel-table';
 $field-class: '.excel__input';
 $button-class: '.excel__button';
+$dashboard-class: '.dashboard';
 
 /* font-size */
 $h1-desktop: 48px;
@@ -25,10 +26,15 @@ $h4-mobile: 12px;
 
 $paragraph: 12px;
 
+/* size */
+$row-info-width: 40px;
+$cell-width: 80px;
+
 /* colors */
 $black: #07101d;
 $blue: #2d64d7;
 $border-color: #c0c0c0;
+$border-color-light: #d7d7d7;
 $grey-dark: #565454;
 $white-antique: #e0dede;
 $green-light: #389458;
