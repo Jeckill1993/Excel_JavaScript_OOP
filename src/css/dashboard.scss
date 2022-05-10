@@ -1,6 +1,8 @@
 
 #{$dashboard-class} {
 
+  color: $black;
+
   &-header {
 
     &__title {
@@ -58,6 +60,51 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  &-tables {
+    padding: 50px 0;
+
+    &__title {
+      font-size: $h2-desktop;
+      line-height: 1.5em;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+  }
+
+  &-list {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $h3-desktop;
+      line-height: 1.5em;
+      font-weight: 500;
+      padding: 12px 14px;
+    }
+
+    &-record {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $h4-desktop;
+      line-height: 1.5;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $border-color-light;
+        border-radius: 8px;
+      }
+    }
+
+    &__name, &__date {
+      width: 100%;
+      max-width: 200px;
     }
   }
 }
