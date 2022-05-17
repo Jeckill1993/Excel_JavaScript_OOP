@@ -3,6 +3,13 @@ import { ExcelComponent } from "Core/ExcelComponent";
 export class Formula extends ExcelComponent {
     static className = 'excel-formula';
 
+    constructor(element) {
+        super(element, {
+            name: 'formula',
+            listeners: ['input']
+        });
+    }
+
     renderHTML() {
         return `
                 <div class="wrapper wrapper_large">
@@ -14,5 +21,9 @@ export class Formula extends ExcelComponent {
                     </div>
                 </div>
             `
+    }
+
+    inputHandler() {
+        console.log('input event for formula');
     }
 }

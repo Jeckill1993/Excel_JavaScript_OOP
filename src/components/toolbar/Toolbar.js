@@ -3,6 +3,13 @@ import { ExcelComponent } from "Core/ExcelComponent";
 export class Toolbar extends ExcelComponent {
     static className = 'excel-toolbar';
 
+    constructor(element) {
+        super(element, {
+            name: 'toolbar',
+            listeners: ['input']
+        });
+    }
+
     renderHTML() {
         return `
             <div class="wrapper wrapper_large">

@@ -2,7 +2,7 @@
 export class Excel {
     constructor(selector, propOptions) {
 
-        this.defaultOptions = [];
+        this.defaultOptions = {};
 
         this.container = document.querySelector(selector);
         this.options = {
@@ -13,6 +13,7 @@ export class Excel {
 
     render() {
         this.container.append(this.#getRoot());
+        this.components.forEach((component) => {component.init()});
     }
 
     #getRoot() {
@@ -21,13 +22,15 @@ export class Excel {
 
         const components = this.options.components;
 
-        components.forEach((Component) => {
+        this.components = components.map((Component) => {
             const element = document.createElement('div');
             element.classList.add(Component.className);
             const component = new Component(element);
             element.innerHTML = component.renderHTML();
 
             root.append(element);
+
+            return component;
         });
 
         return root;

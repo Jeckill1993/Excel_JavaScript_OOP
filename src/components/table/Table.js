@@ -3,6 +3,13 @@ import { ExcelComponent } from "Core/ExcelComponent";
 export class Table extends ExcelComponent {
     static className = 'excel-table';
 
+    constructor(element) {
+        super(element, {
+            name: 'table',
+            listeners: ['input']
+        });
+    }
+
     renderHTML() {
         return `
                 <div class="wrapper wrapper_large">
