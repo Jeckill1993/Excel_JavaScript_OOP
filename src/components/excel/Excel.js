@@ -17,12 +17,17 @@ export class Excel {
 
     #getRoot() {
         const root = document.createElement('div');
+        root.classList.add('excel');
+
         const components = this.options.components;
 
         components.forEach((Component) => {
-            const component = new Component();
+            const element = document.createElement('div');
+            element.classList.add(Component.className);
+            const component = new Component(element);
+            element.innerHTML = component.renderHTML();
 
-            root.insertAdjacentHTML('beforeend', component.renderHTML());
+            root.append(element);
         });
 
         return root;

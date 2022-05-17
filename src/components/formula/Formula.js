@@ -4,6 +4,15 @@ export class Formula extends ExcelComponent {
     static className = 'excel-formula';
 
     renderHTML() {
-        return `<h1>Formula</h1>`
+        return `
+                <div class="wrapper wrapper_large">
+                    <div class="excel-formula__content">
+                        <div class="excel-formula__info"><em>fn</em></div>
+                        <div class="excel-formula__fieldset">
+                            <input class="excel__input" />
+                        </div>
+                    </div>
+                </div>
+            `
     }
 }
