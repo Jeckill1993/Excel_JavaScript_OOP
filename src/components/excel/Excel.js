@@ -4,6 +4,8 @@ export class Excel {
 
         this.defaultOptions = {};
 
+        this.components = [];
+
         this.container = document.querySelector(selector);
         this.options = {
             ...this.defaultOptions,

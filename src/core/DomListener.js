@@ -15,10 +15,12 @@ export class DomListener {
         ]
     }
 
-
-
     initDomListeners() {
-
+        this.listeners.forEach((listener) => {
+            this.element.addEventListener(listener, () => {
+                console.log('here');
+            });
+        })
     }
 
     removeDomListeners() {
