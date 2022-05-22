@@ -4,10 +4,9 @@ export class Formula extends ExcelComponent {
     static className = 'excel-formula';
 
     constructor(element) {
-        super(element, {
-            name: 'formula',
-            listeners: ['input']
-        });
+        super();
+
+        this.element = element;
     }
 
     renderHTML() {
@@ -23,6 +22,21 @@ export class Formula extends ExcelComponent {
             `
     }
 
+    init() {
+        this.listeners.push({
+            element: this.element,
+            event: 'input',
+            callback: this.inputHandler,
+        })
+
+        this.initDomListeners();
+    }
+
+    initDomListeners() {
+        super.initDomListeners();
+    }
+
+    /* events handlers */
     inputHandler() {
         console.log('input event for formula');
     }

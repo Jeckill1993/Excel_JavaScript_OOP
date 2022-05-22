@@ -4,10 +4,9 @@ export class Table extends ExcelComponent {
     static className = 'excel-table';
 
     constructor(element) {
-        super(element, {
-            name: 'table',
-            listeners: ['input']
-        });
+        super();
+
+        this.element = element;
     }
 
     renderHTML() {

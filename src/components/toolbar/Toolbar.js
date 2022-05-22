@@ -4,10 +4,9 @@ export class Toolbar extends ExcelComponent {
     static className = 'excel-toolbar';
 
     constructor(element) {
-        super(element, {
-            name: 'toolbar',
-            listeners: ['input']
-        });
+        super();
+
+        this.element = element;
     }
 
     renderHTML() {

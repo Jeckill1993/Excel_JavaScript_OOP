@@ -1,29 +1,25 @@
 
 export class DomListener {
-    constructor(element, listeners) {
-        if (!element) {
-            throw new Error('Element is undefined');
-        }
-
-        this.element = element;
-
-        this.defaultListeners = [];
-
-        this.listeners = [
-            ...this.defaultListeners,
-            ...listeners
-        ]
+    constructor() {
+        this.listeners = []
     }
 
-    initDomListeners() {
+    setListeners() {
         this.listeners.forEach((listener) => {
-            this.element.addEventListener(listener, () => {
-                console.log('add events by setListeners');
-            });
+            const { element, event, callback } = listener;
+            console.log(listener);
+            element.addEventListener(event, callback);
         })
     }
 
-    removeDomListeners() {
+    initDomListeners() {
+        this.setListeners();
+    }
 
+    removeDomListeners() {
+        this.listeners.forEach((listener) => {
+            const { element, event, callback } = listener;
+            element.removeEventListener(event, callback);
+        })
     }
 }

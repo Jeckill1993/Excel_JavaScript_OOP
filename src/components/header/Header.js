@@ -4,10 +4,9 @@ export class Header extends ExcelComponent {
     static className = 'excel-header';
 
     constructor(element) {
-        super(element, {
-            name: 'header',
-            listeners: ['input']
-        });
+        super();
+
+        this.element = element;
     }
 
     renderHTML() {
